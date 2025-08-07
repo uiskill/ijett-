@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+body,section{
+  font-family: 'Barlow', sans-serif;
+
+    background: #f0f2f8;
+
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.border-left{
+  border-left: 2px solid var(--primary) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #000402;
+    font-family: var(--heading-font);
+}
+.sidebar{
+  top: 0;
+  left : 0;
+  z-index : 100;
+  overflow-y: auto;
+    background-color: #161c25;
+}
+.card {
+    --bs-card-spacer-y: 25px;
+    --bs-card-spacer-x: 25px;
+    --bs-card-title-spacer-y: .5rem;
+    --bs-card-title-color: ;
+    --bs-card-subtitle-color: ;
+    --bs-card-border-width: 0px;
+    --bs-card-border-color: #e9ecef;
+    --bs-card-border-radius: 4px;
+    --bs-card-box-shadow: 0 2px 6px -1px rgba(0, 0, 0, .1);
+    --bs-card-inner-border-radius: 4px;
+    --bs-card-cap-padding-y: 25px;
+    --bs-card-cap-padding-x: 25px;
+    --bs-card-cap-bg: transparent;
+    --bs-card-cap-color: ;
+    --bs-card-height: ;
+    --bs-card-color: ;
+    --bs-card-bg: #ffffff;
+    --bs-card-img-overlay-padding: 1.25rem;
+    --bs-card-group-margin: .75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    color: var(--bs-body-color);
+    word-wrap: break-word;
+    background-color: var(--bs-card-bg);
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
+}
+
+.pc-sidebar{
+    color: #7267ef;
+
+    font-size: 17px;
+    font-weight: 900;
+}
+.pc-sidebarbg{
+   background-color:  #7267ef;
+   color:#fff;
+
+}
+.dashboard-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,0.15);
+}
+
+.dashboard-card .icon {
+  flex-shrink: 0;
+}
+.btn-primary {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #7267ef;
+    --bs-btn-border-color: #7267ef;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #6158cb;
+    --bs-btn-hover-border-color: #5b52bf;
+    --bs-btn-focus-shadow-rgb: 135, 126, 241;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #5b52bf;
+    --bs-btn-active-border-color: #564db3;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    --bs-btn-disabled-color: #ffffff;
+    --bs-btn-disabled-bg: #7267ef;
+    --bs-btn-disabled-border-color: #7267ef;
+}
+.overlay{
+  background-color: #161c25;
+  z-index: 99;
+}
+.footer1 {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Bootstrap's light bg */
+  text-align: center;
+  padding: 10px 0;
+  border-top: 1px solid #dee2e6;
+  z-index: 1030; /* keep it above content */
+}
+/* sidebar for small screens */
+@media screen and (max-width: 767px){
+  
+  .sidebar{
+    max-width: 18rem;
+    transform : translateX(-100%);
+    transition : transform 0.4s ease-out;
+  }
+  
+  .sidebar.active{
+    transform : translateX(0);
+  }
+  
+}
